@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso Online de Marketing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    .login-container h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .login-container p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .login-container input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .login-container button {
+      width: 85%;
+      padding: 10px;
+      background-color: #4facfe;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-container button:hover {
+      background-color: #00f2fe;
+    }
+
+    .course-content {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .course-content h2 {
+      color: #333;
+    }
+
+    .course-content p {
+      color: #555;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container" id="loginBox">
+    <h1>Bienvenido al Curso Online</h1>
+    <p>Ingresa tus credenciales para acceder al contenido</p>
+    <input type="text" id="username" placeholder="Usuario"><br>
+    <input type="password" id="password" placeholder="Contraseña"><br>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div class="course-content" id="courseContent" style="display:none;">
+    <h2>¡Has ingresado correctamente!</h2>
+    <p>Este es el contenido exclusivo del curso de Marketing Online.</p>
+    <ul>
+      <li>Lección 1: Introducción al Marketing Digital</li>
+      <li>Lección 2: Estrategias de redes sociales</li>
+      <li>Lección 3: Email Marketing</li>
+      <li>Lección 4: SEO básico</li>
+    </ul>
+  </div>
+
+  <script>
+    function login() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      // Credenciales simuladas para la práctica
+      if(user === "usuario" && pass === "1234") {
+        alert("¡Bienvenido, " + user + "!");
+        // Oculta login y muestra contenido
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("courseContent").style.display = "block";
+      } else {
+        alert("Usuario o contraseña incorrectos");
+      }
+    }
+  </script>
+</body>
+</html>
